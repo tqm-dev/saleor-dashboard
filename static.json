@@ -2,6 +2,6 @@
   "root": "build/dashboard/",
   "https_only": true,
   "routes": {
-    "/**": "index.html"
+    "/**": "dashboard.html"
   }
 }

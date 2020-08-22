@@ -18,7 +18,7 @@ const checkerPlugin = new CheckerPlugin({
   reportFiles: ["src/**/*.{ts,tsx}"]
 });
 const htmlWebpackPlugin = new HtmlWebpackPlugin({
-  filename: "index.html",
+  filename: "dashboard.html",
   hash: true,
   template: "./src/index.html"
 });
@@ -42,12 +42,11 @@ module.exports = (env, argv) => {
   }
 
   if (!devMode) {
-    const publicPath = process.env.STATIC_URL || "/";
     output = {
       chunkFilename: "[name].[chunkhash].js",
       filename: "[name].[chunkhash].js",
       path: resolve(dashboardBuildPath),
-      publicPath
+      publicPath: "/dashboard-assets/"
     };
     fileLoaderPath = "file-loader?name=[name].[hash].[ext]";
   } else {
