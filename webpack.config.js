@@ -61,6 +61,7 @@ module.exports = (env, argv) => {
 
   return {
     devServer: {
+      index: "dashboard.html",
       compress: true,
       contentBase: path.join(__dirname, dashboardBuildPath),
       historyApiFallback: true,
