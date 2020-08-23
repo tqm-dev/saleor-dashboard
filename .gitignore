@@ -25,6 +25,7 @@
 *.mo
 local_settings.py
 __pycache__/
+build/
 coverage/
 dist/
 *\.egg*
